@@ -1,0 +1,12 @@
+# Site settings
+title: yamadapc
+description: >
+  Writting code and getting mad.
+baseurl: ""
+url: "https://yamadapc.github.io"
+twitter_username: "yamadapc"
+github_username: "yamadapc"
+keybase_username: "ym"
+
+# Build settings
+markdown: kramdown
