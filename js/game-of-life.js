@@ -3,6 +3,11 @@ function GameOfLife(canvas) {
   this.canvas = canvas;
   this.context = canvas.getContext('2d');
 
+  this.resize(canvas);
+}
+
+GameOfLife.prototype.resize = function (canvas) {
+  this.clear();
   this.height = canvas.height;
   this.width = canvas.width;
 
@@ -29,7 +34,7 @@ function GameOfLife(canvas) {
   this.toggle(centerX + 2, centerY);
   this.toggle(centerX + 2, centerY + 1);
   this.toggle(centerX + 2, centerY + 2);
-}
+};
 
 GameOfLife.prototype.start = function() {
   var _this = this;
@@ -131,11 +136,19 @@ function repeat(v, n) {
 }
 
 var canvas = document.getElementById('home-canvas');
+
 canvas.width = canvas.parentNode.offsetWidth;
+
 var game = new GameOfLife(canvas);
 game.redraw();
 game.canvas.onclick = function() {
   if(!game.running) game.start();
   else game.stop();
+};
+
+window.onresize = function() {
+  canvas.width = canvas.parentNode.offsetWidth;
+  game.resize(canvas);
+  game.redraw();
 };
 })();
