@@ -91,7 +91,7 @@ exports = module.exports = function add(x, y) {
 {% endhighlight %}
 
 To publish on `npm` we'd also need a `package.json` file with something like:
-{% highlight json %}
+{% highlight javascript %}
 {
   "name": "add",
   "version": "0.0.1",
@@ -121,7 +121,7 @@ reporter to use), we see everything is working and pretty (though useless):
 
 Now we need to add a blanket configuration to the `package.json`. We do this by
 adding a `"config"` node to the top-level, with the following contents:
-{% highlight json %}
+{% highlight javascript %}
 "config": {
   "blanket": {
     "data-cover-never": "node_modules",
