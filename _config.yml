@@ -8,5 +8,11 @@ twitter_username: "yamadapc"
 github_username: "yamadapc"
 keybase_username: "ym"
 
+sass:
+  style: compressed
+
+gems:
+  - jekyll-sitemap
+
 # Build settings
 markdown: kramdown
