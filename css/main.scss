@@ -9,18 +9,6 @@ $gutter-width: 20;
 
 $total-width: 100%;
 
-// Includes a medium style underline to a piece of text
-// (extracted from: http://codepen.io/timbrown/pen/kuDxK)
-@mixin medium-underline($transparency: 14%) {
-  background-image: linear-gradient(
-    to top,
-    transparent 11%,
-    rgba(0, 0, 0, 0.7) 6%,
-    rgba(0, 0, 0, 0.3) 11%,
-    transparent $transparency
-  );
-}
-
 body {
   font-family: Helvetica-Neue, Helvetica, OpenSans, Arial, Sans-Serif;
   margin: 0;
@@ -51,13 +39,10 @@ pre code {
 }
 
 a {
-  text-decoration: none;
   color: #000;
-  @include medium-underline();
 
   &:hover,
   &:visited {
-    @include medium-underline(17%);
     color: #000;
   }
 }
