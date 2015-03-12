@@ -9,6 +9,7 @@ github_username: "yamadapc"
 keybase_username: "ym"
 
 sass:
+  charset: UTF-8
   style: compressed
 
 gems:
