@@ -33,50 +33,48 @@ pre code {
 }
 
 .wrapper {
+  margin: 20px auto;
   max-width: 960px;
-  margin: 0 auto;
   padding-left: 20px;
-  padding-right: 20px;
+  padding: 50px;
+  background-color: white;
 }
 
 a {
-  color: #000;
+  color: #555;
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: underline;
+  }
 
   &:hover,
   &:visited {
-    color: #000;
+    color: #555;
   }
 }
 
 .header {
+  text-align: center;
+
   h1 {
     $font-size: 2.3em;
     font-size: $font-size;
     padding: 0;
-    margin: 0;
+    margin: 0 auto;
 
     a,
     a:hover,
     a:visited {
+      color: #555;
       background-image: none;
-    }
-
-    a.about-asterisk {
-      transition: font-size 0.1s ease-in-out;
-      line-height: 0.1em;
-
-      &:hover {
-        font-size: 1.2em;
-        transition: font-size 0.2s ease-in-out;
-      }
+      text-decoration: none;
     }
   }
 
   ul {
-    margin: 0;
+    margin: 0 auto;
     padding: 0;
-    margin-top: -0.1em;
-    padding-left: 0.7em;
   }
 
   li {
@@ -84,7 +82,23 @@ a {
   }
 
   .contact-info {
-    font-weight: lighter;
+    font-size: 20px;
+    a {
+      color: #aaa;
+    }
+  }
+
+  .profile-picture {
+    border-radius: 80px;
+    -webkit-border-radius: 80px;
+    -moz-border-radius: 80px;
+    border: 3px solid gray;
+    height: 160px;
+    width: 160px;
+  }
+
+  .about {
+    margin-top: 20px;
   }
 }
 
@@ -149,7 +163,7 @@ h4 {
 }
 
 .posts {
-  @include column(3);
+  margin-top: 40px;
 
   ul {
     margin: 0;
@@ -157,6 +171,7 @@ h4 {
   }
 
   li {
+    font-size: 20px;
     margin-bottom: 0.6em;
     list-style: none;
   }

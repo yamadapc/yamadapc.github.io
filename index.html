@@ -1,32 +1,14 @@
 ---
 layout: default
 ---
-<div class="projects">
-  <div class="section-title">
-    <h2>Projects</h2>
-    <h4>(github probably has a better - and more up to date - view of them)</h4>
-  </div>
-
-  <div class="items">
-    {% for project in site.categories.projects %}
-      <div class="item">
-        <a class="item-title" href="{{ project.github_url | prepend: site.baseurl }}">{{ project.title }}</a><br/>
-        <p class="item-description">{{ project.description }}</p>
-      </div>
-    {% endfor %}
-  </div>
-</div>
 
 <div class="posts">
-  <div class="section-title">
-    <h2>Blog Posts</h2>
-  </div>
   <ul class="list">
     {% for post in site.categories.posts %}
-      <li class="item">
-        <a class="item-title" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a><br/>
-        <p class="item-description">{{ post.date | date: "%b %-d, %Y" }}</p>
-      </li>
+    <li class="item">
+      <a class="item-title" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a><br/>
+      <p class="item-description">{{ post.date | date: "%b %-d, %Y" }}</p>
+    </li>
     {% endfor %}
   </ul>
 </div>

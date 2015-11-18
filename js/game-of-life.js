@@ -1,47 +1,39 @@
-(function() {
+// (function() {
 function GameOfLife(canvas) {
   this.canvas = canvas;
   this.context = canvas.getContext('2d');
-
-  this.resize(canvas);
+  this.resize();
 }
 
-GameOfLife.prototype.resize = function (canvas) {
+GameOfLife.prototype.resize = function() {
   this.clear();
   this.height = canvas.height;
   this.width = canvas.width;
 
-  this.cellSize = canvas.height / 50;
+  this.cellSize = canvas.height / 200;
   this.rheight = Math.floor(this.height / this.cellSize);
   this.rwidth = Math.floor(this.width / this.cellSize);
 
   this.grid = repeat(undefined, this.rheight)
     .map(repeat.bind(null, false, this.rwidth));
+  this.newgrid = repeat(undefined, this.rheight)
+    .map(repeat.bind(null, false, this.rwidth));
 
-  // Start with Paul Callahan's 5x5 infinite growth pattern:
-  var centerX = Math.floor(this.rwidth / 2);
-  var centerY = Math.floor(this.rheight / 2);
-  this.toggle(centerX - 2, centerY - 2);
-  this.toggle(centerX - 2, centerY - 1);
-  this.toggle(centerX - 2, centerY + 2);
-  this.toggle(centerX - 1, centerY - 2);
-  this.toggle(centerX - 1, centerY + 1);
-  this.toggle(centerX, centerY - 2);
-  this.toggle(centerX, centerY + 1);
-  this.toggle(centerX, centerY + 2);
-  this.toggle(centerX + 1, centerY);
-  this.toggle(centerX + 2, centerY - 2);
-  this.toggle(centerX + 2, centerY);
-  this.toggle(centerX + 2, centerY + 1);
-  this.toggle(centerX + 2, centerY + 2);
+  for(var i = 0; i < this.rwidth; i++) {
+    for(var j = 0; j < this.rheight; j++) {
+      if(Math.random() < 0.1) {
+        this.toggle(i, j);
+      }
+    }
+  }
 };
 
 GameOfLife.prototype.start = function() {
   var _this = this;
-  this.interval = setInterval(function() {
+  this.interval = setInterval(function loop() {
     _this.step();
     _this.redraw();
-  }, 10);
+  }, 100);
   this.running = true;
 };
 
@@ -60,12 +52,31 @@ GameOfLife.prototype.redraw = function() {
   var cellSize = this.cellSize;
   var rheight = this.rheight;
   var rwidth = this.rwidth;
+  var surroundSize = cellSize * 0.9;
+  var containedSize = cellSize * 0.7;
+  var fillStyles = [
+    '#99f999',
+    '#99dbf7',
+  ];
+  var lastColor = 0;
+  function nextColor() {
+    lastColor = (lastColor + 1) % 2;
+    return fillStyles[lastColor];
+  }
 
   this.clear();
+
   for(var i = 0; i < rheight; i++) {
+    var posy = i * cellSize;
     for(var j = 0; j < rwidth; j++) {
+      var posx = j * cellSize;
+
+      this.context.fillStyle = '#f8f8f8';
+      this.drawSquare(posx, posy, surroundSize);
+
       if(grid[i][j]) {
-        this.drawSquare(j * cellSize, i * cellSize, cellSize);
+        this.context.fillStyle = nextColor();
+        this.drawSquare(posx, posy, containedSize);
       }
     }
   }
@@ -100,7 +111,7 @@ GameOfLife.prototype.outofBounds = function(x, y) {
 
 GameOfLife.prototype.step = function() {
   var grid = this.grid;
-  var newgrid = [];
+  var newgrid = this.newgrid;
 
   for(var i = 0; i < this.rheight; i++) {
     newgrid[i] = [];
@@ -121,6 +132,7 @@ GameOfLife.prototype.step = function() {
   }
 
   this.grid = newgrid;
+  this.newgrid = grid;
 };
 
 GameOfLife.prototype.drawSquare = function(posx, posy, size) {
@@ -137,18 +149,19 @@ function repeat(v, n) {
 
 var canvas = document.getElementById('home-canvas');
 
-canvas.width = canvas.parentNode.offsetWidth;
+canvas.height = screen.height;
+canvas.width = screen.width;
 
 var game = new GameOfLife(canvas);
+game.step();
+game.step();
 game.redraw();
-game.canvas.onclick = function() {
-  if(!game.running) game.start();
-  else game.stop();
+canvas.onclick = function() {
+  if(game.running) {
+    game.stop();
+  } else {
+    game.start();
+  }
 };
 
-window.onresize = function() {
-  canvas.width = canvas.parentNode.offsetWidth;
-  game.resize(canvas);
-  game.redraw();
-};
-})();
+// })();
