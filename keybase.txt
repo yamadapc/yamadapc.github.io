@@ -1,0 +1,75 @@
+==================================================================
+https://keybase.io/ym
+--------------------------------------------------------------------
+
+I hereby claim:
+
+  * I am an admin of http://yamadapc.com.br
+  * I am ym (https://keybase.io/ym) on keybase.
+  * I have a public key with fingerprint 8BBD FC80 C62E AEC5 8BDB  8648 860B FF6B AEB9 800C
+
+To do so, I am signing this object:
+
+{
+    "body": {
+        "key": {
+            "eldest_kid": "01015265d60ac75874685edd4b472835e55bafed78541c6d4097d02e0a3ec935ddf60a",
+            "fingerprint": "8bbdfc80c62eaec58bdb8648860bff6baeb9800c",
+            "host": "keybase.io",
+            "key_id": "860bff6baeb9800c",
+            "kid": "01015265d60ac75874685edd4b472835e55bafed78541c6d4097d02e0a3ec935ddf60a",
+            "uid": "0e9e8412dadbff0940ab5ed71b38d800",
+            "username": "ym"
+        },
+        "service": {
+            "hostname": "yamadapc.com.br",
+            "protocol": "http:"
+        },
+        "type": "web_service_binding",
+        "version": 1
+    },
+    "ctime": 1472161228,
+    "expire_in": 157680000,
+    "prev": "e6ec3a50194066991ff7b275199f56d48a31b1456e40c9778f3126637b19f3f7",
+    "seqno": 24,
+    "tag": "signature"
+}
+
+which yields the signature:
+
+-----BEGIN PGP MESSAGE-----
+Version: Keybase OpenPGP v2.0.56
+Comment: https://keybase.io/crypto
+
+yMM/AnicrVJtUFRVGF6+dVlXmsyaLIauo6kDzL137+eiBOMCmSSDtEVjtd5z77nL
+FfaDu8vHShjWSI5EqUOjBkLsmIMKLtHQgDIJpLEJJAWTTioqNmvMYIM5hkwonWv5
+r5/9OvOe93me93neec8uitDpw6pj5wtPdlcZwgb76kp0b5yBQxUYcEk+zFyBFcJH
+DyySoMdrK1QkzIzhBE7QJENLDC6ILM2xFMPRUJIoQLEkZ6IhTQNBhhLL0RQhMhKF
+86yEkxAXTFDkTbQkyYiJJWKy4rRD1a0qTi+S5QCQZJHDRYaEAhRpDkiAYyiOY3Ag
+ywwQIOA5HBcRscDl0RjIHBA8MFlxoT9U2B7Z+w/8/+y75B85yEOOIkhJkNA8nKdw
+ASA5lgAmTkKDNaAHqk7BARHa58AqEzFUlyoi1FaqZXjcExyCJLjFZNHlSAYqIrpV
+l9cluopQs8DrdZs1rtfn1sBlENj+lbEBxSmhHSJCKVQ9isuJmQmEFL2KpkugWARD
+kCSXiMFyt6JCm6IhaJZB9nBcGwNLkSRkoGgSaJxAGRiG5wlZZgHJ0gTPyzTaAyeY
+CEBQNAMpXORZlpNNBMkwJhYQvGySWUwLVux0YWaSQj4FO9L0KHan4C1RIVbZ3/dW
+pC5Mr4uOCteOS6dfGPf45Kz+xfOvhvgNQPf0yqax+pSSmLatbH1x+6X1YxeuzyZe
+umhqDVt8c66z7eXIyPdXTzlyIy0dxmP1w2xFebyiZhjS/tiw4vw9deP0k7jAbVl9
+/G5rXPOoUX9iaEr+8bTj9Df9O2I3r8kiBgOTS/bHH2o3d8i5XdecUZFKx8G1/dbB
+Jv2N2lXE5uzuc1F1DjoYckt7K3IHIzqX6m+etX8eXbWps+SDOeNl75mIvmcsroS7
+U7r716VVVzN+Tsy29G4ab7gWPHGgJzk05Y+xzOrbK5ldPfO3AtH7glL/wS9H1huq
+v6bBe6nx+O7phpVrMyoX2B3rrEnVMZ2Z4SOfZjV0sZlNSSliXMpfRwr3WD4bkM/f
+/vWpw/nLZ+Zo2pqT2byi98Ghnfn9w5bgn6Fljm/9Hz472VHc1Xh70hecabuSlPAi
+2NJytOXkKw+/+r5sW+DdT2Irt+VdLX7H7yuaWLBsPKy9beJ4V+uS2JiPJgOGxqNv
+/1J2WBke3X5ONtQuD924srVHesHH0M+NLWrPTg0/QvoTutN16y6+9KZRXzA7NR0b
+fPC7dc3lmnyi+7WU0edrzNO5xv0fhzq3z80fCKVn9Y75B+I31ixdGL0rJ73ZeKe3
+IfRDeXZW3p2q34IXclpsM08M+Q27G78YOJZmT7/3+sO6+9adQl5tqjl/ZMdPE2OB
+7xI8p3KS1UDa+K1TfwPjLcFa
+=r7Kr
+-----END PGP MESSAGE-----
+
+And finally, I am proving ownership of this host by posting or
+appending to this document.
+
+View my publicly-auditable identity here: https://keybase.io/ym
+
+==================================================================
+
